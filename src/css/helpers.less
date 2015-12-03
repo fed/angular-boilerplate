@@ -1,0 +1,66 @@
+// Media queries
+.responsify(@xs, @sm, @md, @lg, @xl) {
+
+  /* XXS devices (phones from 320px to 400px wide)
+  /* No media query since this is mobile first */
+
+  // Larger than mobile
+  @media (min-width: @breakpoint-xs) { @xs(); }
+
+  // Larger than phablet
+  @media (min-width: @breakpoint-sm) { @sm(); }
+
+  // Larger than tablet
+  @media (min-width: @breakpoint-md) { @md(); }
+
+  // Larger than desktop
+  @media (min-width: @breakpoint-lg) { @lg(); }
+
+  // Larger than desktop hd
+  @media (min-width: @breakpoint-xl) { @xl(); }
+}
+
+// Decorators
+.bg-blue { background-color: @color-blue; }
+.fg-blue { color: @color-blue; }
+
+.bg-green { background-color: @color-green; }
+.fg-green { color: @color-green; }
+
+.bg-red { background-color: @color-red; }
+.fg-red { color: @color-red; }
+
+.bg-yellow { background-color: @color-yellow; }
+.fg-yellow { color: @color-yellow; }
+
+.bg-white { background-color: @color-white; }
+.fg-white { color: @color-white; }
+
+// Text positioning
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+// Floats
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+// Tables
+.table { display: table; width: 100%; }
+.table-row { display: table-row; }
+.table-cell { display: table-cell; }
+.table-header { display: table-header-group; }
+.table-footer { display: table-footer-group; }
+
+// Clearfix
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

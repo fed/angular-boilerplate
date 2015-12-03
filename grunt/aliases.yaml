@@ -1,0 +1,17 @@
+js:
+  - jshint
+  - concat
+css:
+  - less
+  - csslint
+  - cssmin
+build:
+  - js
+  - css
+  - copy
+start:
+  - build
+  - connect
+  - watch
+default:
+  - start

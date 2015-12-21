@@ -6,6 +6,7 @@ css:
   - csslint
   - cssmin
 build:
+  - clean
   - js
   - css
   - copy

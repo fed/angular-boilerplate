@@ -5,8 +5,7 @@ module.exports = function () {
         hostname: '*',
         port: process.env.PORT || '6789',
         base: 'dist/',
-        livereload: true,
-        open: true
+        livereload: true
       }
     }
   };

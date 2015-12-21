@@ -1,4 +1,4 @@
-# Prode WebApp
+# Angular, Grunt and Sass Boilerplate
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ Run `npm install` the first time you download the app in order to build the bina
 
 Grunt CLI can be installed globally for convenience with `npm install -g grunt-cli`, otherwise the binary can be found here: `./node_modules/grunt-cli/bin/grunt`
 
-## Building the prode-webapp artifact
+## Building the artifact
 
 Run `grunt build` to build the app.
 

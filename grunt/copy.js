@@ -20,10 +20,9 @@ module.exports = function () {
       flatten: true,
       filter: 'isFile',
       src: [
-        'node_modules/font-awesome/fonts/**',
         'node_modules/bootstrap/fonts/**'
       ],
-      dest: 'dist/fonts/'
+      dest: 'dist/fonts/bootstrap/'
     }
   };
 };

@@ -4,8 +4,7 @@ module.exports = function () {
       options: {
         outputStyle: 'compressed',
         includePaths: [
-          'node_modules/bootstrap-sass/assets/stylesheets',
-          'node_modules/font-awesome/scss'
+          'node_modules/bootstrap-sass/assets/stylesheets'
         ]
       },
       files: {

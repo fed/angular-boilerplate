@@ -1,0 +1,60 @@
+// For more info on how to use this mixins
+// and helper functions read this article:
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+// ------------------------------------------
+
+// Set a rem font size with pixel fallback
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// Media Queries
+@mixin breakpoint-xl {
+  @media only screen and (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg {
+  @media only screen and (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md {
+  @media only screen and (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin breakpoint-sm {
+  @media only screen and (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xs {
+  @media only screen and (max-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
+// Offscreen (visible to screen readers only)
+%offscreen {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+.offscreen { @extend %offscreen; }

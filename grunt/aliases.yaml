@@ -2,7 +2,7 @@ js:
   - jshint
   - concat
 css:
-  - less
+  - sass
   - csslint
   - cssmin
 build:

@@ -1,9 +1,15 @@
 module.exports = function () {
   return {
-    all: {
-      compress: true,
+    dist: {
+      options: {
+        outputStyle: 'compressed',
+        includePaths: [
+          'node_modules/bootstrap-sass/assets/stylesheets',
+          'node_modules/font-awesome/scss'
+        ]
+      },
       files: {
-        'dist/css/app.min.css': 'src/css/app.less'
+        'dist/css/app.min.css': 'src/css/app.scss'
       }
     }
   };

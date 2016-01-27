@@ -4,14 +4,14 @@
 // ------------------------------------------
 
 // Set a rem font size with pixel fallback
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
+@function calculate-rem($size) {
+  $rem-size: $size / 16px;
+  @return $rem-size * 1rem;
 }
 
 @mixin font-size($size) {
   font-size: $size;
-  font-size: calculateRem($size);
+  font-size: calculate-rem($size);
 }
 
 // Media Queries
@@ -47,14 +47,14 @@
 
 // Offscreen (visible to screen readers only)
 %offscreen {
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
   clip: rect(0 0 0 0);
   clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
+  width: 1px;
 }
 
 .offscreen { @extend %offscreen; }

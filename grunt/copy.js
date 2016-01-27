@@ -1,28 +1,23 @@
 module.exports = function () {
   return {
-    html: {
-      cwd: 'src/',
-      expand: true,
-      src: ['{,**/}*.html'],
-      dest: 'dist/'
-    },
     images: {
       expand: true,
       flatten: true,
       filter: 'isFile',
-      src: [
-        'src/images/**'
-      ],
+      src: ['src/images/**'],
       dest: 'dist/images/'
     },
     fonts: {
       expand: true,
-      flatten: true,
-      filter: 'isFile',
-      src: [
-        'node_modules/bootstrap/fonts/**'
-      ],
-      dest: 'dist/fonts/bootstrap/'
+      cwd: 'src/fonts',
+      src: ['{,**/}*'],
+      dest: 'dist/fonts/'
+    },
+    glyphicons: {
+      expand: true,
+      cwd: 'node_modules/bootstrap-sass/assets/fonts',
+      src: ['{,**/}*'],
+      dest: 'dist/fonts/'
     }
   };
 };

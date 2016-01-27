@@ -1,0 +1,9 @@
+linters:
+  StringQuotes:
+    enabled: true
+    style: double_quotes
+  LeadingZero:
+    enabled: true
+    style: include_zero
+  DuplicateProperty:
+    enabled: false

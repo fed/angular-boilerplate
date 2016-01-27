@@ -1,14 +1,14 @@
 module.exports = function () {
   return {
     js: {
-      files: ['Gruntfile.js', 'src/js/{,**/}*.js'],
+      files: ['src/js/{,**/}*.js'],
       tasks: ['js'],
       options: {
         livereload: true
       }
     },
     css: {
-      files: ['src/css/{,**/}*.{sass,scss,css}'],
+      files: ['src/css/{,**/}*.scss'],
       tasks: ['css'],
       options: {
         livereload: true
@@ -16,7 +16,7 @@ module.exports = function () {
     },
     html: {
       files: ['src/{,**/}*.html'],
-      tasks: ['build'],
+      tasks: ['html'],
       options: {
         livereload: true
       }

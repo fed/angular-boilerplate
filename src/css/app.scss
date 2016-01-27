@@ -1,11 +1,4 @@
 // -----------------------------
-// Custom Components
-// -----------------------------
-
-@import "variables";
-@import "helpers";
-
-// -----------------------------
 // Bootstrap
 // -----------------------------
 
@@ -59,3 +52,11 @@
 // Utility classes
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
+
+// -----------------------------
+// Custom Components
+// -----------------------------
+
+@import "variables";
+@import "helpers";
+@import "typography";

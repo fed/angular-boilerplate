@@ -1,14 +1,18 @@
 js:
-  - jshint
+  - eslint
   - concat
+  - uglify
 css:
+  - scsslint
   - sass
-  - csslint
-  - cssmin
+  - postcss
+html:
+  - htmlmin
 build:
   - clean
   - js
   - css
+  - html
   - copy
 start:
   - build

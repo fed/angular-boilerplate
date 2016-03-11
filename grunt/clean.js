@@ -1,5 +1,3 @@
-module.exports = function () {
-  return {
-    clean: ['dist']
-  };
+module.exports = {
+  clean: ['dist']
 };

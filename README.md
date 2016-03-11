@@ -1,23 +1,12 @@
 # Angular, Grunt and Sass Boilerplate
 
-## Prerequisites
+## Building
 
-* Node.js (http://nodejs.org/)
-* Grunt CLI (http://gruntjs.com/)
+Run `npm install` the first time you clone this project in order to fetch all of the dependencies.
 
-Run `npm install` the first time you download the app in order to build the binaries for any node modules.
+For development purposes, Grunt's default task will automatically watch all of your source files for changes, build the appropriate distribution files and refresh the page for you. To run start the app and the watch task, run `npm start`. The app will go live on http://0.0.0.0:6789/.
 
-Grunt CLI can be installed globally for convenience with `npm install -g grunt-cli`, otherwise the binary can be found here: `./node_modules/grunt-cli/bin/grunt`
-
-## Building the artifact
-
-Run `grunt build` to build the app.
-
-## Running and watching for changes
-
-When developing, there is a watch task that will automatically watch any of your source files for changes, and generate the appropriate distribution files.
-
-To run start the app and the watch task, run `grunt`. The app will go live on http://0.0.0.0:6789/.
+To just build the app, run `npm run build` instead.
 
 ## Release Versions
 

@@ -1,5 +1,5 @@
 {
-  "name": "angular-grunt-boilerplate",
+  "name": "angular-boilerplate",
   "version": "0.0.0",
   "description": "Angular, Grunt & Sass Boilerplate",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/fknussel/angular-grunt-boilerplate.git"
+    "url": "https://bitbucket.org/fknussel/angular-boilerplate.git"
   },
   "scripts": {
     "start": "./node_modules/grunt-cli/bin/grunt",
@@ -35,7 +35,7 @@
     "grunt-contrib-htmlmin": "^0.6.0",
     "grunt-contrib-uglify": "^0.9.2",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-eslint": "^17.3.1",
+    "grunt-eslint": "^18.0.0",
     "grunt-git-committers": "^0.1.4",
     "grunt-postcss": "^0.7.1",
     "grunt-sass": "^1.1.0",

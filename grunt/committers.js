@@ -1,8 +1,6 @@
-module.exports = function () {
-  return {
-    options: {
-      email: true,
-      output: 'AUTHORS.md'
-    }
-  };
+module.exports = {
+  options: {
+    email: true,
+    output: 'AUTHORS.md'
+  }
 };

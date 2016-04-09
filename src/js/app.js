@@ -1,12 +1,15 @@
 'use strict';
 
-var weatherApp = angular.module('weatherApp', [
-  'ngRoute',
-  'ngResource'
+var angular = require('angular');
+
+// Module definition and dependencies
+var app = angular.module('weatherApp', [
+  require('angular-route'),
+  require('angular-resource')
 ]);
 
-weatherApp.config(function ($routeProvider) {
-  // Routing
+// Routing
+app.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/home.html',
@@ -24,3 +27,14 @@ weatherApp.config(function ($routeProvider) {
       redirectTo: '/'
     });
 });
+
+// Services
+app.service('CityService', require('./services/cityService'));
+app.service('WeatherService', require('./services/weatherService'));
+
+// Directives
+app.directive('weatherReport', require('./directives/weatherReport'));
+
+// Controllers
+app.controller('HomeCtrl', require('./controllers/HomeCtrl'));
+app.controller('ForecastCtrl', require('./controllers/ForecastCtrl'));

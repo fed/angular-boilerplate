@@ -1,11 +1,13 @@
-weatherApp.controller('HomeCtrl', ['$scope', '$location', 'cityService', function ($scope, $location, cityService) {
-  $scope.city = cityService.city;
+'use strict';
+
+module.exports = function ($scope, $location, CityService) {
+  $scope.city = CityService.city;
 
   $scope.$watch('city', function () {
-    cityService.city = $scope.city;
+    CityService.city = $scope.city;
   });
 
   $scope.submit = function () {
     $location.path('/forecast');
   };
-}]);
+};

@@ -1,3 +1,3 @@
-weatherApp.service('cityService', function () {
+module.exports = function () {
   this.city = 'Sydney, NSW, Australia';
-});
+};

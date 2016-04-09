@@ -1,4 +1,11 @@
-# Angular, Grunt and Sass Boilerplate
+# Angular 1.5 Boilerplate
+
+* Angular 1.5.x
+* Browserify
+* ES6 powered by Babel
+* Grunt
+* Sass
+* Mocha and Chai for tests
 
 ## Building
 

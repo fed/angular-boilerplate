@@ -1,7 +1,6 @@
 js:
   - eslint
-  - concat
-  - uglify
+  - browserify
 css:
   - scsslint
   - sass

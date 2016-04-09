@@ -1,7 +1,7 @@
-weatherApp.directive('weatherReport', function () {
+module.exports = function () {
   return {
     restrict: 'E',
-    templateUrl: 'views/weatherReport.html',
+    templateUrl: 'views/directives/weather-report.html',
     replace: true,
     scope: {
       weatherDay: '=',
@@ -10,4 +10,4 @@ weatherApp.directive('weatherReport', function () {
       dateFormat: '@'
     }
   };
-});
+};

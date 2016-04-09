@@ -1,13 +1,13 @@
-module.exports = function () {
-  return {
-    restrict: 'E',
-    templateUrl: 'views/directives/weather-report.html',
-    replace: true,
-    scope: {
+export default class WeatherReport {
+  constructor() {
+    this.templateUrl = 'views/directives/weather-report.html';
+    this.restrict = 'E';
+    this.replace = true;
+    this.scope = {
       weatherDay: '=',
       convertToStandard: '&',
       convertToDate: '&',
       dateFormat: '@'
-    }
-  };
-};
+    };
+  }
+}

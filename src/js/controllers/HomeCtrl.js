@@ -1,13 +1,21 @@
-'use strict';
+export default class HomeCtrl {
+  constructor($scope, $location, CityService) {
+    this.CityService = CityService;
+    this.$location = $location;
+    this.$scope = $scope;
 
-module.exports = function ($scope, $location, CityService) {
-  $scope.city = CityService.city;
+    $scope.city = CityService.get();
+    $scope.submit = this.submit.bind(this);
+    $scope.$watch('city', this.onCityChange.bind(this));
+  }
 
-  $scope.$watch('city', function () {
-    CityService.city = $scope.city;
-  });
+  onCityChange() {
+    this.CityService.set(this.$scope.city);
+  }
 
-  $scope.submit = function () {
-    $location.path('/forecast');
-  };
-};
+  submit() {
+    this.$location.path('/forecast');
+  }
+}
+
+HomeCtrl.$inject = ['$scope', '$location', 'CityService'];

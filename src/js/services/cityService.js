@@ -1,3 +1,13 @@
-module.exports = function () {
-  this.city = 'Sydney, NSW, Australia';
-};
+export default class CityService {
+  constructor() {
+    this.city = 'Sydney, NSW, Australia';
+  }
+
+  set(newCity) {
+    this.city = newCity;
+  }
+
+  get() {
+    return this.city;
+  }
+}

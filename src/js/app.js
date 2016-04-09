@@ -1,12 +1,33 @@
-'use strict';
+import angular from 'angular';
+import ngRoute from 'angular-route';
+import ngResource from 'angular-resource';
 
-var angular = require('angular');
+import HomeCtrl from './controllers/HomeCtrl';
+import ForecastCtrl from './controllers/ForecastCtrl';
+import weatherReport from './directives/weatherReport';
+import CityService from './services/CityService';
+import WeatherService from './services/WeatherService';
 
 // Module definition and dependencies
 var app = angular.module('weatherApp', [
-  require('angular-route'),
-  require('angular-resource')
+  ngRoute,
+  ngResource
 ]);
+
+// Constants
+app.constant('ROOT_URL', 'http://api.openweathermap.org/data/2.5');
+app.constant('API_KEY', 'ae112c6acf5b9fb83ca3d20895541979');
+
+// Services
+app.service('CityService', CityService);
+app.service('WeatherService', WeatherService);
+
+// Directives
+app.directive('weatherReport', () => new weatherReport);
+
+// Controllers
+app.controller('HomeCtrl', HomeCtrl);
+app.controller('ForecastCtrl', ForecastCtrl);
 
 // Routing
 app.config(function ($routeProvider) {
@@ -27,14 +48,3 @@ app.config(function ($routeProvider) {
       redirectTo: '/'
     });
 });
-
-// Services
-app.service('CityService', require('./services/cityService'));
-app.service('WeatherService', require('./services/weatherService'));
-
-// Directives
-app.directive('weatherReport', require('./directives/weatherReport'));
-
-// Controllers
-app.controller('HomeCtrl', require('./controllers/HomeCtrl'));
-app.controller('ForecastCtrl', require('./controllers/ForecastCtrl'));

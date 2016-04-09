@@ -8,7 +8,9 @@ export default class ForecastCtrl {
   }
 
   convertToFahrenheit(degreesKelvin) {
-    return Math.round((1.8 * (degreesKelvin - 273)) + 32);
+    let degreesFahrenheit = Math.round((1.8 * (degreesKelvin - 273)) + 32);
+
+    return `${degreesFahrenheit} ºF`;
   }
 
   convertToDate(datetime) {

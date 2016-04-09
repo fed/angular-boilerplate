@@ -1,11 +1,12 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h4>Forecast by City</h4>
-    <form ng-submit="submit()">
-      <div class="form-group">
-        <input type="text" ng-model="city" class="form-control" />
-      </div>
-      <input type="submit" class="btn btn-primary" value="Get Forecast" />
-    </form>
-  </div>
-</div>
+<section class="city-selector">
+  <h1>Forecast by City</h1>
+
+  <form class="city-selector__form form-inline" ng-submit="submit()">
+    <div class="form-group">
+      <label class="city-selector__form-label">Please select a city</label>
+      <input type="text" ng-model="city" class="city-selector__form-input form-control" />
+    </div>
+
+    <input type="submit" class="city-selector__form-button btn btn-primary" value="Get Forecast" />
+  </form>
+</section>

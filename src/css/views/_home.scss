@@ -1,0 +1,13 @@
+.city-selector {
+  &__form {
+    background-color: $color-light-gray;
+    border: 1px solid $color-md-gray;
+    border-radius: 4px;
+    padding: 10px 25px;
+  }
+
+  &__form-label,
+  &__form-input {
+    margin-right: 10px;
+  }
+}

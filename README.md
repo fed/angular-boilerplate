@@ -12,7 +12,7 @@ This seed project supports:
 
 Run `npm install` the first time you clone this project in order to fetch all of the dependencies.
 
-For development purposes, Grunt's default task will automatically watch all of your source files for changes, build the appropriate distribution files and refresh the page for you. To run start the app and the watch task, run `npm start`. The app will go live on http://0.0.0.0:6789/.
+For development purposes, Grunt's default task will automatically watch all of your source files for changes, build the appropriate distribution files and refresh the page for you. To run start the app and the watch task, run `npm start`. The app will go live on [http://localhost:6789/](http://localhost:6789/).
 
 To just build the app, run `npm run build` instead.
 

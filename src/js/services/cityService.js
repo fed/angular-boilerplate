@@ -3,11 +3,11 @@ export default class CityService {
     this.city = 'Sydney, NSW, Australia';
   }
 
-  set(newCity) {
+  setCity(newCity) {
     this.city = newCity;
   }
 
-  get() {
+  getCity() {
     return this.city;
   }
 }

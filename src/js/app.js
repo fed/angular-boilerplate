@@ -9,14 +9,10 @@ import CityService from './services/CityService';
 import WeatherService from './services/WeatherService';
 
 // Module definition and dependencies
-var app = angular.module('weatherApp', [
+const app = angular.module('weatherApp', [
   ngRoute,
   ngResource
 ]);
-
-// Constants
-app.constant('ROOT_URL', 'http://api.openweathermap.org/data/2.5');
-app.constant('API_KEY', 'ae112c6acf5b9fb83ca3d20895541979');
 
 // Services
 app.service('CityService', CityService);

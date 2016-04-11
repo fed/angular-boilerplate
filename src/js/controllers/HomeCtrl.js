@@ -4,13 +4,13 @@ export default class HomeCtrl {
     this.$location = $location;
     this.$scope = $scope;
 
-    $scope.city = CityService.get();
+    $scope.city = CityService.getCity ();
     $scope.submit = this.submit.bind(this);
     $scope.$watch('city', this.onCityChange.bind(this));
   }
 
   onCityChange() {
-    this.CityService.set(this.$scope.city);
+    this.CityService.setCity(this.$scope.city);
   }
 
   submit() {

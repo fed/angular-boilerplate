@@ -1,6 +1,6 @@
-// -----------------------------
-// Bootstrap
-// -----------------------------
+///////////////
+// Bootstrap //
+///////////////
 
 // Core variables and mixins
 @import "bootstrap/variables";
@@ -53,13 +53,12 @@
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
-// -----------------------------
-// Custom Components
-// -----------------------------
+///////////////////////
+// Custom Components //
+///////////////////////
 
 @import "variables";
 @import "helpers";
-@import "typography";
 
 @import "views/home";
 @import "views/forecast";

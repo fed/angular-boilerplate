@@ -1,7 +1,6 @@
 js:
   - eslint
-  - concat
-  - uglify
+  - browserify
 css:
   - scsslint
   - sass
@@ -13,7 +12,6 @@ build:
   - js
   - css
   - html
-  - copy
 start:
   - build
   - connect

@@ -1,11 +1,24 @@
-<h1>Forecast for {{ city }}</h1>
-<p><a href="#/">Back to Search</a></p>
-<p>Days: <a href="#/forecast/2" ng-class="{ 'bg-primary': days === '2' }">2</a> | <a href="#/forecast/5" ng-class="{ 'bg-primary': days === '5' }">5</a> | <a href="#/forecast/7" ng-class="{ 'bg-primary': days === '7' }">7</a></p>
+<section class="forecast">
+  <h1>Forecast for {{ city }}</h1>
+  <p><a href="#/">← Back to Search</a></p>
 
-<div ng-repeat="w in weatherResult.list">
-  <div class="row">
-    <div class="col-md-12">
-      <weather-report weather-day="w" convert-to-standard="convertToFahrenheit(daytimeTemp)" convert-to-date="convertToDate(dt)" date-format="MMMM d, y"></weather-report>
-    </div>
-  </div>
-</div>
+  <ul class="forecast__navigation nav nav-tabs">
+    <li role="presentation" ng-class="{ 'active': days == 2 }">
+      <a href="#/forecast/2">Today and tomorrow</a>
+    </li>
+    <li role="presentation" ng-class="{ 'active': days == 5 }">
+      <a href="#/forecast/5">Next 5 days</a>
+    </li>
+    <li role="presentation" ng-class="{ 'active': days == 7 }">
+      <a href="#/forecast/7">Next week</a>
+    </li>
+  </ul>
+
+  <article ng-repeat="w in weatherResult.list">
+    <weather-report
+      weather-day="w"
+      convert-to-standard="convertToFahrenheit(daytimeTemp)"
+      convert-to-date="convertToDate(dt)"
+      date-format="MMMM d, y" />
+  </article>
+</section>

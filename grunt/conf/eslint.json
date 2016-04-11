@@ -1,12 +1,27 @@
 {
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "classes": true
+    }
+  },
   "env": {
     "browser": true,
-    "es6": true,
-    "node": true
+    "mocha": true,
+    "node": true,
+    "es6": true
   },
   "globals": {
-    "angular": true,
-    "weatherApp": true
+    "after": true,
+    "afterEach": true,
+    "before": true,
+    "beforeEach": true,
+    "describe": true,
+    "it": true,
+    "sinon": true,
+    "require": true
   },
   "extends": "eslint:recommended",
   "rules": {

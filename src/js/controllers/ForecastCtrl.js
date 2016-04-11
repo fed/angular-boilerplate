@@ -1,13 +1,21 @@
-weatherApp.controller('ForecastCtrl', ['$scope', '$resource', '$routeParams', 'cityService', 'weatherService', function ($scope, $resource, $routeParams, cityService, weatherService) {
-  $scope.city = cityService.city;
-  $scope.days = $routeParams.days || '2';
-  $scope.weatherResult = weatherService.getWeather($scope.city, $scope.days);
+export default class ForecastCtrl {
+  constructor($scope, $routeParams, CityService, WeatherService) {
+    $scope.city = CityService.getCity();
+    $scope.days = $routeParams.days || 2;
+    $scope.weatherResult = WeatherService.getWeather($scope.city, $scope.days);
+    $scope.convertToFahrenheit = this.convertToFahrenheit;
+    $scope.convertToDate = this.convertToDate;
+  }
 
-  $scope.convertToFahrenheit = function (degK) {
-    return Math.round((1.8 * (degK - 273)) + 32);
-  };
+  convertToFahrenheit(degreesKelvin) {
+    const degreesFahrenheit = Math.round((1.8 * (degreesKelvin - 273)) + 32);
 
-  $scope.convertToDate = function (dt) {
-    return new Date(dt * 1000);
-  };
-}]);
+    return `${degreesFahrenheit} ºF`;
+  }
+
+  convertToDate(datetime) {
+    return new Date(datetime * 1000);
+  }
+}
+
+ForecastCtrl.$inject = ['$scope', '$routeParams', 'CityService', 'WeatherService'];

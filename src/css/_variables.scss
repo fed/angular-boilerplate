@@ -4,33 +4,13 @@ $color-red: #e55c53;
 $color-green: #44ab28;
 $color-yellow: #f6af2d;
 $color-white: #fff;
-$color-light-gray: #ccc;
-$color-md-gray: #4f4f4f;
-$color-dark-gray: #121212;
+$color-light-gray: #f2f2f2;
+$color-md-gray: #cbcbcb;
+$color-dark-gray: #4f4f4f;
 $color-black: #000;
-$color-facebook: #2b4b90;
 
 // Aliases
 $color-text: $color-dark-gray;
-
-// Brand fonts
-$font-light: 'GothamLightRegular', Arial, Helvetica, sans-serif;
-$font-medium: 'GothamMediumRegular', Arial, Helvetica, sans-serif;
-$font-book: 'GothamBookRegular', Arial, Helvetica, sans-serif;
-$font-bold: 'GothamBoldRegular', Arial, Helvetica, sans-serif;
-$font-black: 'GothamBlackRegular', Arial, Helvetica, sans-serif;
-
-// Font sizes
-$font-md: 16px;
-$font-sm: 0.75 * $font-md;
-$font-lg: 1.375 * $font-md;
-$font-xl: 2 * $font-md;
-
-// Horizontal and vertical spacing
-$offset-md: 10px;
-$offset-sm: 0.5 * $offset-md;
-$offset-lg: 2 * $offset-md;
-$offset-xl: 4 * $offset-md;
 
 // Responsive breakpoints
 $breakpoint-xs: 400px; // Larger than mobile

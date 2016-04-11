@@ -1,7 +1,15 @@
-weatherApp.service('weatherService', ['$resource', function ($resource) {
-  this.getWeather = function (city, days) {
-    var weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily?APPID=ae112c6acf5b9fb83ca3d20895541979', { callback: 'JSON_CALLBACK' }, { get: { method: 'JSONP' }});
+import {ROOT_URL, API_KEY} from '../utils/constants';
 
-    return weatherAPI.get({ q: city, cnt: days });
-  };
-}]);
+export default class WeatherService {
+  constructor($resource) {
+    const url = `${ROOT_URL}/forecast/daily?APPID=${API_KEY}`;
+
+    this.dailyForecastAPI = $resource(url, { callback: 'JSON_CALLBACK' }, { get: { method: 'JSONP' }});
+  }
+
+  getWeather(city, days) {
+    return this.dailyForecastAPI.get({ q: city, cnt: days });
+  }
+}
+
+WeatherService.$inject = ['$resource'];

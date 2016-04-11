@@ -1,6 +1,6 @@
-// -----------------------------
-// Bootstrap
-// -----------------------------
+///////////////
+// Bootstrap //
+///////////////
 
 // Core variables and mixins
 @import "bootstrap/variables";
@@ -25,7 +25,7 @@
 //@import "bootstrap/dropdowns";
 //@import "bootstrap/button-groups";
 //@import "bootstrap/input-groups";
-//@import "bootstrap/navs";
+@import "bootstrap/navs";
 //@import "bootstrap/navbar";
 //@import "bootstrap/breadcrumbs";
 //@import "bootstrap/pagination";
@@ -53,10 +53,12 @@
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
-// -----------------------------
-// Custom Components
-// -----------------------------
+///////////////////////
+// Custom Components //
+///////////////////////
 
 @import "variables";
 @import "helpers";
-@import "typography";
+
+@import "views/home";
+@import "views/forecast";

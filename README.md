@@ -1,11 +1,12 @@
-# Angular 1.5 Boilerplate
+# Angular 1.x Boilerplate
+
+This seed project supports:
 
 * Angular 1.5.x
 * Browserify
 * ES6 powered by Babel
 * Grunt
 * Sass
-* Mocha and Chai for tests
 
 ## Building
 
@@ -17,13 +18,12 @@ To just build the app, run `npm run build` instead.
 
 ## Release Versions
 
-This repo uses [grunt-bump](https://github.com/vojtajina/grunt-bump) to version and tag releases. To version a release, move to master and run the appropriate command:
+To version and tag a release, move to `master` and run the [appropriate command](https://docs.npmjs.com/cli/version):
 
 ```
-grunt release:major       # bump major version, eg. 1.0.2 -> 2.0.0
-grunt release:minor       # bump minor version, eg. 0.1.3 -> 0.2.0
-grunt release:patch       # bump patch version, eg. 0.0.1 -> 0.0.2
-grunt release:prerelease  # bump pre-release version, eg. 1.0.0 -> 1.0.0-1
+npm version major  # bump major version, eg. 1.0.2 -> 2.0.0
+npm version minor  # bump minor version, eg. 0.1.3 -> 0.2.0
+npm version patch  # bump patch version, eg. 0.0.1 -> 0.0.2
 ```
 
 Make sure to push tags:
@@ -43,7 +43,3 @@ Given a version number `MAJOR.MINOR.PATCH`, increment the:
 Additional labels for pre-release and build metadata are available as extensions to the `MAJOR.MINOR.PATCH` format.
 
 See the [Semantic Versioning](http://semver.org/) specification for more information.
-
-## Release History
-
-See the [CHANGELOG](CHANGELOG.md).

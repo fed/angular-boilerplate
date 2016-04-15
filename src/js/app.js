@@ -26,7 +26,7 @@ app.controller('HomeCtrl', HomeCtrl);
 app.controller('ForecastCtrl', ForecastCtrl);
 
 // Routing
-app.config(function ($routeProvider) {
+app.config(($routeProvider) => {
   $routeProvider
     .when('/', {
       templateUrl: 'views/home.html',

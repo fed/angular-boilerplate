@@ -2,7 +2,7 @@ js:
   - eslint
   - browserify
 css:
-  - scsslint
+  - sasslint
   - sass
   - postcss
 html:

@@ -1,18 +1,6 @@
 // For more info on how to use this mixins
 // and helper functions read this article:
 // http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
-// ------------------------------------------
-
-// Set a rem font size with pixel fallback
-@function calculate-rem($size) {
-  $rem-size: $size / 16px;
-  @return $rem-size * 1rem;
-}
-
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculate-rem($size);
-}
 
 // Media Queries
 @mixin breakpoint-xl {
@@ -47,7 +35,6 @@
 
 // Offscreen (visible to screen readers only)
 %offscreen {
-  clip: rect(0 0 0 0);
   clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;
